@@ -1,0 +1,15 @@
+{
+  "name": "MultiplayerTicTacToeAndroid",
+  "version": "1.0.0",
+  "description": "This is a quick sample android multiplayer game for socket.io practicing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Moslehpour",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.0.4"
+  }
+}
