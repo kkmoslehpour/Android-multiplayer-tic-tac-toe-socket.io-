@@ -51,4 +51,9 @@ io.on('connection', function(socket){
 	  		message: message
 	  	});
 	});
+
+	socket.on('disconnect', function(){
+		console.log("Player Disconnected!");
+		socket.broadcast.emit('player disconnect', {id: socket.id});
+	});
 });

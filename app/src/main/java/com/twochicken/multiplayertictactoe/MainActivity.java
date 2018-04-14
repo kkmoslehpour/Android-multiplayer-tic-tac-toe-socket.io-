@@ -186,6 +186,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 });
             }
+        }).on("player disconnect", new Emitter.Listener() {
+            @Override
+            public void call(final Object... args) {
+                MainActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        JSONObject data = (JSONObject) args[0];
+                        try {
+                            String id = data.getString("id");
+                            Toast.makeText(getApplicationContext(), id + " was disconnected!",Toast.LENGTH_LONG).show();
+                        } catch (JSONException e) {
+                            System.out.println("Error!");
+                        }
+                    }
+                });
+            }
         });
     }
 
